@@ -1,0 +1,44 @@
+# server {
+#   listen 80;
+#   server_name elasticsearch.*;
+#
+#   access_log  /var/log/nginx/elasticsearch.access.log;
+#   error_log /var/log/nginx/elasticsearch.error.log;
+#
+#   location / {
+#
+#     # Deny Nodes Shutdown API
+#     if ($request_filename ~ "_shutdown") {
+#       return 403;
+#       break;
+#     }
+#
+#     # Deny access to Cluster API
+#     if ($request_filename ~ "_cluster") {
+#       return 403;
+#       break;
+#     }
+#
+#     if ($request_method !~ ^(GET|POST|HEAD)$ ) {
+#        return 405;
+#        break;
+#     }
+#
+#     # Pass requests to ElasticSearch
+#     proxy_pass http://localhost:9200;
+#     proxy_redirect off;
+#
+#     proxy_set_header X-Real-IP $remote_addr;
+#     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+#     proxy_set_header Host $http_host;
+#
+#     # For CORS Ajax
+#     add_header Access-Control-Allow-Origin *;
+#     add_header Access-Control-Allow-Credentials true;
+#     add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+#     # Route all requests to feeds index
+#     rewrite ^(.*)/(.*)/(.*) /$1/$2/_search$3 break;
+#     rewrite_log on;
+#
+#   }
+# }

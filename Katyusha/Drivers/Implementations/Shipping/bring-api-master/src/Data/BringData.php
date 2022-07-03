@@ -1,0 +1,93 @@
+<?php
+
+namespace Trafficfox\Bring\API\Data;
+
+/**
+ * Created by PhpStorm.
+ * User: Trafficfox
+ * Date: 5/24/16
+ * Time: 10:34 PM.
+ */
+
+class BringData
+{
+    public const LANG_NORWEGIAN = 'no';
+    public const LANG_ENGLISH = 'en';
+    public const LANG_DANISH = 'da';
+    public const LANG_SWEDISH = 'sv';
+
+    public const PRODUCT_SERVICEPAKKE = 'SERVICEPAKKE';
+    public const PRODUCT_SERVICEPAKKE_RETURSERVICE = 'SERVICEPAKKE_RETURSERVICE';
+    public const PRODUCT_BPAKKE_DOR_DOR = 'BPAKKE_DOR-DOR';
+    public const PRODUCT_BPAKKE_DOR_DOR_RETURSERVICE = 'BPAKKE_DOR-DOR_RETURSERVICE';
+    public const PRODUCT_EKSPRESS09 = 'EKSPRESS09';
+    public const PRODUCT_EKSPRESS09_RETURSERVICE = 'EKSPRESS09_RETURSERVICE';
+    public const PRODUCT_PICKUP_PARCEL = 'PICKUP_PARCEL';
+    public const PRODUCT_PICKUP_PARCEL_BULK = 'PICKUP_PARCEL_BULK';
+    public const PRODUCT_HOME_DELIVERY_PARCEL = 'HOME_DELIVERY_PARCEL';
+    public const PRODUCT_BUSINESS_PARCEL = 'BUSINESS_PARCEL';
+    public const PRODUCT_BUSINESS_PARCEL_BULK = 'BUSINESS_PARCEL_BULK';
+    public const PRODUCT_EXPRESS_NORDIC_0900_BULK = 'EXPRESS_NORDIC_0900_BULK';
+    public const PRODUCT_BUSINESS_PALLET = 'BUSINESS_PALLET';
+    public const PRODUCT_BUSINESS_PARCEL_HALFPALLET = 'BUSINESS_PARCEL_HALFPALLET';
+    public const PRODUCT_BUSINESS_PARCEL_QUARTERPALLET = 'BUSINESS_PARCEL_QUARTERPALLET';
+    public const PRODUCT_EXPRESS_NORDIC_0900 = 'EXPRESS_NORDIC_0900';
+    public const PRODUCT_PA_DOREN = 'PA_DOREN';
+    public const PRODUCT_PAKKE_I_POSTKASSEN = 'PAKKE_I_POSTKASSEN';
+    public const PRODUCT_PAKKE_I_POSTKASSEN_SPORBAR = 'PAKKE_I_POSTKASSEN_SPORBAR';
+    public const PRODUCT_MAIL = 'MAIL';
+    public const PRODUCT_EXPRESS_NORDIC_SAME_DAY = 'EXPRESS_NORDIC_SAME_DAY';
+    public const PRODUCT_EXPRESS_INTERNATIONAL_0900 = 'EXPRESS_INTERNATIONAL_0900';
+    public const PRODUCT_EXPRESS_INTERNATIONAL_1200 = 'EXPRESS_INTERNATIONAL_1200';
+    public const PRODUCT_EXPRESS_INTERNATIONAL = 'EXPRESS_INTERNATIONAL';
+    public const PRODUCT_EXPRESS_ECONOMY = 'EXPRESS_ECONOMY';
+    public const PRODUCT_CARGO_GROUPAGE = 'CARGO_GROUPAGE';
+    public const PRODUCT_COURIER_VIP = 'COURIER_VIP';
+    public const PRODUCT_COURIER_1H = 'COURIER_1H';
+    public const PRODUCT_COURIER_2H = 'COURIER_2H';
+    public const PRODUCT_COURIER_4H = 'COURIER_4H';
+    public const PRODUCT_COURIER_6H = 'COURIER_6H';
+    public const PRODUCT_OIL_EXPRESS = 'OIL_EXPRESS';
+
+    /**
+     * See http://developer.bring.com/api/booking/.
+     */
+    public static function validProducts()
+    {
+        return [
+            self::PRODUCT_SERVICEPAKKE,
+            self::PRODUCT_SERVICEPAKKE_RETURSERVICE,
+            self::PRODUCT_BPAKKE_DOR_DOR,
+            self::PRODUCT_BPAKKE_DOR_DOR_RETURSERVICE,
+            self::PRODUCT_EKSPRESS09,
+            self::PRODUCT_EKSPRESS09_RETURSERVICE,
+            self::PRODUCT_PICKUP_PARCEL,
+            self::PRODUCT_PICKUP_PARCEL_BULK,
+            self::PRODUCT_HOME_DELIVERY_PARCEL,
+            self::PRODUCT_BUSINESS_PARCEL,
+            self::PRODUCT_BUSINESS_PARCEL_BULK,
+            self::PRODUCT_EXPRESS_NORDIC_0900_BULK,
+            self::PRODUCT_BUSINESS_PALLET,
+            self::PRODUCT_BUSINESS_PARCEL_HALFPALLET,
+            self::PRODUCT_BUSINESS_PARCEL_QUARTERPALLET,
+            self::PRODUCT_EXPRESS_NORDIC_0900,
+            self::PRODUCT_PA_DOREN,
+            self::PRODUCT_PAKKE_I_POSTKASSEN,
+            self::PRODUCT_PAKKE_I_POSTKASSEN_SPORBAR,
+            self::PRODUCT_MAIL,
+            self::PRODUCT_EXPRESS_NORDIC_SAME_DAY,
+            self::PRODUCT_EXPRESS_INTERNATIONAL_0900,
+            self::PRODUCT_EXPRESS_INTERNATIONAL_1200,
+            self::PRODUCT_EXPRESS_INTERNATIONAL,
+            self::PRODUCT_EXPRESS_ECONOMY,
+            self::PRODUCT_CARGO_GROUPAGE,
+            self::PRODUCT_COURIER_VIP,
+            self::PRODUCT_COURIER_1H,
+            self::PRODUCT_COURIER_2H,
+            self::PRODUCT_COURIER_4H,
+            self::PRODUCT_COURIER_6H,
+            self::PRODUCT_OIL_EXPRESS,
+
+        ];
+    }
+}

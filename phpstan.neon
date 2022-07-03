@@ -1,0 +1,17 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    phpVersion: 80100
+    level: 8
+    paths:
+        - app
+        - helpers
+        - Features
+        - Katyusha
+        - config
+        - bootstrap
+    parallel:
+        jobSize: 20
+        maximumNumberOfProcesses: 32
+        minimumNumberOfJobsPerProcess: 4

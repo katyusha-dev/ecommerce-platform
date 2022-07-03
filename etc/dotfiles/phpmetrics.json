@@ -1,0 +1,19 @@
+{
+  "includes": [ "../server/app", "../server/routes", "../server/drivers", "../server/features", "../server/framework", "../server/utils" ],
+
+  "exclude": [ "../server/vendor", "../server/nova", "../server/config" ],
+
+  "report": {
+    "html": "../server/public/ci/report/",
+    "csv": "../server/public/ci/report.csv",
+    "json": "../server/public/ci/report.json",
+    "violations": "../server/public/ci/violations.xml"
+  },
+
+  "groups": [
+  ],
+
+  "plugins": {
+    "git": {"binary": "git"}
+  }
+}

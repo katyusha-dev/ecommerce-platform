@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": [
+      "webpack-env",
+      "jest"
+    ],
+    "paths": {
+      "@/*": ["src/*"],
+      "@interfaces/*": ["src/app/@interfaces/*"],
+      "@enum/*": ["src/app/@enum/*"],
+      "@composables/*": ["src/composables/*"],
+      "@api/*": ["src/app/api/*"]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

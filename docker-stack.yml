@@ -1,0 +1,29 @@
+---
+
+version: '3.3'
+
+services:
+
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+    deploy:
+      mode: replicated
+      restart_policy: &restart_policy
+        condition: on-failure
+        delay: 10s
+        max_attempts: 3
+        window: 120s
+      update_config: &update_config
+        parallelism: 2
+        delay: 10s
+      replicas: 2
+
+  centos:
+    image: katyusha-dev/centos
+    volumes:
+      - ".:/srv"
